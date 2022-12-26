@@ -6,7 +6,6 @@ module.exports = (function() {
 
     router.get('/', async function(req, res){
 		let user = await req.user;
-		console.log(user._json);
 		if(user){
 			return res.render('index', { user: user._json });
 		}
